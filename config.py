@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: ascii -*-
+
+"""
+A really simple configuration manager for
+Woodrow Wilson Bridge
+"""
+
+__author__ = "Joseph Porcelli (porcej@gmail.com)"
+__version__ = "0.0.1"
+__copyright__ = "Copyright (c) 2018 Joseph Porcelli"
+__license__ = "MIT"
+
 import os
 import sys
 import json

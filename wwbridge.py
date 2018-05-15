@@ -13,6 +13,10 @@ Changelog:
         a911's Active911 class
 """
 
+__author__ = "Joseph Porcelli (porcej@gmail.com)"
+__version__ = "0.0.2"
+__copyright__ = "Copyright (c) 2018 Joseph Porcelli"
+__license__ = "MIT"
 
 import servicemanager
 import socket
