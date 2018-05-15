@@ -19,10 +19,13 @@ We will use pyinstaller to build an executable.  This will export the executable
 ```
 
 pyinstaller -F --hidden-import=win32timezone wwbridge.py
+pyinstaller -F --hidden-import=win32timezone config.py
 
 ```
 
 ## Usage
+
+Use config to generate json config file
 
 ```
 Usage: 'wwbridge.exe [options] install|update|remove|start [...]|stop|restart [...]|debug [...]'
