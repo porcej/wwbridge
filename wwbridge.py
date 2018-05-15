@@ -32,7 +32,7 @@ from pathlib import Path
 import sys
 import logging
 import winreg
-from a911 import Active911Client
+from a911 import Active911
 
 
 # Load hidden modules for pyinstaller
