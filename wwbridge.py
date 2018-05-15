@@ -1,3 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: ascii -*-
+
+"""
+Woodrow Wilson Bridge - Win32 applicaiton to fetch Active911 Alerts
+Uses a911's Active911 class
+Sample Implamentation of a911's Active911 class 
+to write Alert Messages to files in a predefined
+directory
+
+Changelog:
+    - 2018-05-15 - Refactored ww_bridge.py to use
+        a911's Active911 class
+"""
+
+
 import servicemanager
 import socket
 import os
@@ -32,8 +48,44 @@ import sleekxmpp.plugins.xep_0131
 import sleekxmpp.plugins.xep_0199
 
 
+class Active911Bridge(Active911):
+    """
+    Override Active911 - to dump json file of alert message
+    """
+
+    # Here we add output directory path to our client
+    output_path = ''
+
+    def __init__(self, device_code, output_dir):
+        """
+        Initilize the XMPP Client
+        """
+
+        # Ensure the output directory exists
+        path = Path(output_dir)
+        path.mkdir(parents=True, exist_ok=True)
+        self.output_path = output_dir
+
+        # Call the Active911's constructor
+        super().__init__(device_code=device_code)
+
+
+    def alert(self, alert_id, alert_msg):
+        """
+        Here we handle the alert by saving it to a file in 
+        self.output_path
+        """
+        with open(os.path.join(self.output_path, alert_id \
+            + '.json'), 'w') as jfh:
+                json.dump(alert_msg, jfh)
+
+
 
 class WoodrowWilsonBridge(win32serviceutil.ServiceFramework):
+    """
+    Simple Win32 Service Wrapper for Active911Bridge
+    Which is itself a simple wrapper for a911's Active911 class
+    """
     _svc_name_ = "WWBridge"
     _svc_display_name_ = "Woodrow Wilson Bridge"
     _svc_description_ = "Active 911 Client that generates json dumps of alert messages"
@@ -113,13 +165,9 @@ class WoodrowWilsonBridge(win32serviceutil.ServiceFramework):
         logging.info("Output directory set to: %s." % op)
         logging.info("Logging directory set to: %s." % lp)
 
-        xmpp = Active911Client(opts.get('a911_registration_id',''), op)
+        xmpp = Active911Bridge(opts.get('a911_registration_id',''), op)
 
-        # Connect to the XMPP server and start processing XMPP stanzas.
-        if xmpp.connect():
-            xmpp.process(block=True)
-        else:
-            logging.error("Unable to connect to Active911.")
+        xmpp.run()
 
 
 
