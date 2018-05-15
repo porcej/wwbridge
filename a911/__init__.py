@@ -125,10 +125,10 @@ class Active911(sleekxmpp.ClientXMPP):
         """
         Performs connection handling 
          - If block is true (default), blocks keeps the thread alive
-         		until a disconnect stanza is received or a termination
-         		commaned is issued (<Ctrl> + C)
+                 until a disconnect stanza is received or a termination
+                 commaned is issued (<Ctrl> + C)
          - If block is false  - thread does not block only use this 
-         		if your're handling threading in the client
+                 if your're handling threading in the client
 
         """
         # We wrap the XMPP stuff in a try..finally clause
@@ -137,7 +137,7 @@ class Active911(sleekxmpp.ClientXMPP):
             # Connect to the XMPP server and start processing XMPP stanzas.
             if not self.connect():
                 logging.error("Unable to connect to Active911")
-                sys.exit(1)	# If we can't connect, then why are we here
+                sys.exit(1)    # If we can't connect, then why are we here
 
             logging.info("Connected to Active911 via XMPP.")
             self.process(block=block)

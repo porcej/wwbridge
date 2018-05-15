@@ -28,15 +28,14 @@ import win32serviceutil
 import json
 import logging
 import logging.handlers
-from pathlib import Path
 import sys
 import logging
 import winreg
+
+from pathlib import Path
 from a911 import Active911
 
-
 # Load hidden modules for pyinstaller
-
 import sleekxmpp.features.feature_bind
 import sleekxmpp.features.feature_mechanisms
 import sleekxmpp.features.feature_preapproval
