@@ -1,0 +1,8 @@
+{
+	"_comment": "Configuration file for a911.py",
+	"a911_registration_id": "",
+	"loglevel": "0",
+	"loglevel_comment": "Numeric Value see https://docs.python.org/3.5/library/logging.html",
+	"logpath": "",
+	"outputpath": ""
+}

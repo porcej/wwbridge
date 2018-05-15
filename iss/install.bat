@@ -1,0 +1,1 @@
+ww_bridge.exe --startup auto install
