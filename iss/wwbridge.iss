@@ -4,7 +4,7 @@
 #define MyAppName "Woodrow Wilson Bridge"
 #define MyAppVersion "1.0"
 #define MyAppPublisher "Porcej"
-#define MyAppURL "https://github.com/porcej/ww_bridge"
+#define MyAppURL "https://github.com/porcej/wwbridge"
 #define MyAppExeName "ww_bridge.exe"
 
 [Setup]
@@ -33,14 +33,14 @@ ArchitecturesInstallIn64BitMode=x64
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "C:\dev\xmpp\dist\ww_bridge.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\dev\xmpp\dist\config.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\dev\xmpp\dist\config.json"; DestDir: "{app}"; Flags: ignoreversion; Permissions: users-modify
-Source: "C:\dev\xmpp\dist\install.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\dev\xmpp\dist\start.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\dev\xmpp\dist\stop.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\dev\xmpp\dist\remove.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\dev\xmpp\dist\license.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\ww_bridge.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\config.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\dist\config.json"; DestDir: "{app}"; Flags: ignoreversion; Permissions: users-modify
+Source: "install.bat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "start.bat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "stop.bat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "remove.bat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "license.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
