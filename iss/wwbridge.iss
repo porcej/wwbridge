@@ -35,7 +35,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Files]
 Source: "..\dist\ww_bridge.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\dist\config.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\dist\config.json"; DestDir: "{app}"; Flags: ignoreversion; Permissions: users-modify
+Source: "config.json"; DestDir: "{app}"; Flags: ignoreversion; Permissions: users-modify
 Source: "install.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "start.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "stop.bat"; DestDir: "{app}"; Flags: ignoreversion
