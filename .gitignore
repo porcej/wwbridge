@@ -141,3 +141,4 @@ $RECYCLE.BIN/
 # PyInstaller
 build/
 dist/
+*.spec
