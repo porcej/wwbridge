@@ -18,7 +18,7 @@ We will use pyinstaller to build an executable.  This will export the executable
 
 ```
 
-pyinstaller -F --hidden-import=win32timezone wwbridge.py
+pyinstaller -F --hidden-import=win32timezone ww_bridge.py
 pyinstaller -F --hidden-import=win32timezone config.py
 
 ```
@@ -28,7 +28,7 @@ pyinstaller -F --hidden-import=win32timezone config.py
 Use config to generate json config file
 
 ```
-Usage: 'wwbridge.exe [options] install|update|remove|start [...]|stop|restart [...]|debug [...]'
+Usage: 'ww_bridge.exe [options] install|update|remove|start [...]|stop|restart [...]|debug [...]'
 Options for 'install' and 'update' commands only:
  --username domain\username : The Username the service is to run under
  --password password : The password for the username
@@ -46,21 +46,21 @@ Options for 'start' and 'stop' commands only:
 
 ### Install
 ```
-$dist\wwbridge.exe install
+$dist\ww_bridge.exe install
 Installing service TestService
 Service installed
 ```
 
 ### Start
 ```
-$dist\wwbridge.exe start
+$dist\ww_bridge.exe start
 Starting service TestService
 ```
 
 ### Clean
 ```
-$dist\wwbridge.exe stop
-$dist\wwbridge.exe remove
+$dist\ww_bridge.exe stop
+$dist\ww_bridge.exe remove
 ```
 
 ## Built With
