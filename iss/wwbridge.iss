@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Woodrow Wilson Bridge"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.1"
 #define MyAppPublisher "Porcej"
 #define MyAppURL "https://github.com/porcej/wwbridge"
 #define MyAppExeName "ww_bridge.exe"
