@@ -6,11 +6,27 @@ a predefined directory
 
 ## Prerequisites
 
-This module is designed to work with `Python >=3.5`.  `Python 2` may work, your milage may very.  The `requirements.txt` file contains the required libraries.  
+This module is designed to work with `Python 3.4+` on a `Windows` system.  `Python 2` may work, your milage may very.  The `requirements.txt` file contains the required libraries except for a911client and optionally sleekmonkey.  
 
 ```
-python >=  3.5
-$pip install -r requirements.txt
+python 3.4+
+$ pip install -r requirements.txt
+$ mkdir a911-build
+$ cd a911-build
+$ git clone https://github.com/porcej/a911client
+$ cd a911client
+$ python setup.py install
+
+# The following is optional, to install sleekmonkey
+$ cd ..
+$ git clonge https://github.com/porcej/sleekmonkey
+$ cd sleekmonkey
+$ python setup.py install
+
+# The following is optional to remove a911client's build directory
+$ cd ..\..
+$ cd rm -rf a911-build
+
 ```
 ## Building wwbridge
 
@@ -67,6 +83,8 @@ $dist\ww_bridge.exe remove
 
 * [Anaconda Python](https://conda.io/) - The python framework
 * [SleekXMPP](https://github.com/fritzy/SleekXMPP) - XMPP Library
+* [A911Client](https://github.com/porcej/a911client) - Active 911 Alert Client
+* [SleekMonkey](https://github.com/porcej/sleekmonkey) - Patch for SleekXMPP 1.3.3 to better handle TLS Certificate dates
 * [Requests](http://docs.python-requests.org/en/master/) - Request and session handling
 
 ## Contributing
