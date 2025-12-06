@@ -3,6 +3,9 @@
 A Servie to connect to Active911 and export alert messages to
 a predefined directory
 
+## ⚠️ Deprecation Notice
+
+**This project is deprecated.** While there is no direct replacement, similar functionality can be implemented using [A911Client](https://github.com/porcej/a911client/), which provides a modern, async-first Python client library for interacting with Active911's API and XMPP interface.
 
 ## Prerequisites
 
