@@ -8,6 +8,10 @@ Sample Implamentation of a911's Active911 class
 to write Alert Messages to files in a predefined
 directory
 
+⚠️ DEPRECATED: This project is deprecated and will not be maintained.
+Similar functionality can be implemented using A911Client:
+https://github.com/porcej/a911client/
+
 Changelog:
     - 2018-05-15 - Refactored ww_bridge.py to use
         a911's Active911 class
@@ -164,6 +168,8 @@ class WoodrowWilsonBridge(win32serviceutil.ServiceFramework):
                             datefmt='%H:%M:%S',
                             handlers=[rlh])
 
+        logging.warning("⚠️  DEPRECATED: This project is deprecated and will not be maintained.")
+        logging.warning("Similar functionality can be implemented using A911Client: https://github.com/porcej/a911client/")
         logging.info("Starting up service.")
         logging.info("Output directory set to: %s." % op)
         logging.info("Logging directory set to: %s." % lp)

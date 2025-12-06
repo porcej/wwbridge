@@ -4,6 +4,10 @@
 """
 A really simple configuration manager for
 Woodrow Wilson Bridge
+
+⚠️ DEPRECATED: This project is deprecated and will not be maintained.
+Similar functionality can be implemented using A911Client:
+https://github.com/porcej/a911client/
 """
 
 __author__ = "Joseph Porcelli (porcej@gmail.com)"
